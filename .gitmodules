@@ -1,0 +1,6 @@
+[submodule "lib/dctrl"]
+	path = lib/dctrl
+	url = git@github.com:DeviceTestFramework/dctrl.git
+[submodule "lib/dtest"]
+	path = lib/dtest
+	url = git@github.com:DeviceTestFramework/dtest.git

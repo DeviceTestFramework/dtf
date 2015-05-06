@@ -1,0 +1,59 @@
+result_dir: "result/latest"
+author: "DTF"
+customer: "Device Test Framework Demo"
+title: "Test Report"
+board: "Raspberry Pi"
+email: "YYYY@prevas.dk"
+
+# List the equipment used to conduct the test
+equipment: {
+'DUT': 'Raspberry Pi, Model B Revision 2',
+Test Controller: 'Raspberry PI, rev: Model B Revision 2.0 512MB + PiFace board',
+Power Supply: '5V DC',
+SD-card: 'Transcend micro SD-card, 8 GB, class 10'
+}
+
+# List the software used to conduct the test
+software: {
+'DUT': 'Raspberry Pi BSP - master branch',
+Test Controller: 'Linux rpi-host 3.10.28+ #1 PREEMPT Tue Feb 4 15:53:16 CET 2014 armv6l GNU/Linux'
+}
+
+# filter_params are used to remove unwanted params in the report.
+# They can be used in two ways.
+# remove: removes the parameters listed
+# keep: keep only the parameters listed
+filter_params:
+ remove: ['logfile']
+# keep: ['timeout']
+
+# TODOs: Report configs with overlays?
+# SW and hardware could be expanded to contain e.g.
+# SW:
+#   Test Sw:  "X.Y" # Test SW running on host
+#   Controller SW: "34.4" # SW running on controller (RPI)
+#   Target SW: " " # Version of the target "
+
+# Similar for HW. Alternative the split should be made as:
+
+# ControllerSetup:
+#   SW:
+#   HW:
+
+# DUTSetup:
+#   SW:
+#   HW:
+
+# HostMachineInfo: # Information about the host which triggered the test and e.g. the versions of the test files
+#   SW:
+#   HW:
+
+# The above information would ideally be store as meta data in result when triggering a test!
+
+
+# filter_suites: []
+# filter_cases: [lib.dctrl.linux.file-benchmark-write]
+
+# # if set, names like lib.dctrl.linux.file-benchmark-write will be stripped until last .
+# # eg. lib.dctrl.linux.file-benchmark-write -> file-benchmark-write
+# strip_names: True

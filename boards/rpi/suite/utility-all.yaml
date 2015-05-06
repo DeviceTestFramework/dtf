@@ -1,0 +1,14 @@
+description: |
+  Raspberry Pi parameterizing of utility tests
+
+tests:
+#- utilities:
+# Note that the parameters below e.g. the  ctrl_ip must match the ip in dctrl.cfg
+- linux_cmd: { params: {
+                 kernelversion: "3.10.38+",
+                 ctrl_ip: "_#_CTRLIP_#_",
+                 dut_ip: "_#_DUTIP_#_",
+                 poweroff_message: "Power down",
+                 halt_message: "System halted.",
+                 reboot_message: "Restarting system."
+              } }

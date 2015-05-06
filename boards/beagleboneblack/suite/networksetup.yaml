@@ -1,0 +1,8 @@
+description: |
+  Purpose: ensure network is up and configured with ip
+
+# BBB needs longer than default timeout to get an IP
+
+tests:
+ - dctrl.linux.cmd: { params: { command: "ifup eth0",timeout: 40 } }
+

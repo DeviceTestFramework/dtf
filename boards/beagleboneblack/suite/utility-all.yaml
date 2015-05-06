@@ -1,0 +1,15 @@
+description: |
+  Beagle Bone Black parameterizing of utility tests
+
+tests:
+#- utilities:
+# Note that the parameters below e.g. the  ctrl_ip must match the ip in dctrl.cfg
+- linux_cmd: { params: {
+                 kernelversion: "3.14.19",
+                 ctrl_ip: "_#_CTRLIP_#_",
+                 dut_ip: "_#_DUTIP_#_",
+                 ctrl_user: "user1",
+                 poweroff_message: "Power down",
+                 halt_message: "System halted.",
+                 reboot_message: "Restarting system."
+              } }
